@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - NFL Today</title>
+    <title>Contato - NFL</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -25,7 +25,7 @@
     <main>
         <section class="contact">
             <h2>Envie sua mensagem</h2>
-            <p>Use o formulário abaixo para sugerir jogadores, dar feedback ou entrar em contato conosco.</p>
+            <p>Use o formulário abaixo para sugerir jogadores, dar feedback ou entrar em contato conosco, se desejar resposta por favor coloque seu e-mail corretamente.</p>
             
             <form id="contact-form">
                 <div class="form-group">
@@ -58,7 +58,22 @@
         </section>
     </main>
 
-    <form action="https://formspree.io/f/vitor.zucatti@escola.pr.gov.br" method="POST">
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mblybokv"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
     <footer>
      <p>© 2025 NFL - Projeto de Pensamento Computacional</p>
