@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Dados detalhados dos jogadores
+    // Dados detalhados dos jogadores (mantido igual)
     const playersData = {
         "Patrick Mahomes": {
             idade: "29 anos",
@@ -7,51 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
             recordes: "Considerado o melhor QB da geração",
             curiosidade: "Filho de um ex-jogador da MLB"
         },
-        "Justin Jefferson": {
-            idade: "26 anos",
-            draft: "2020 - 1ª rodada, 22º overall",
-            recordes: "Mais jardas recebidas nos 3 primeiros anos na NFL",
-            curiosidade: "Campeão nacional universitário com LSU em 2019"
-        },
-        "Josh Allen": {
-            idade: "29 anos",
-            draft: "2018 - 1ª rodada, 7º overall",
-            recordes: "Primeiro QB com 4.000+ jardas aéreas e 750+ terrestres em temporada",
-            curiosidade: "Jogou beisebol universitário"
-        },
-        "Lamar Jackson": {
-            idade: "28 anos",
-            draft: "2018 - 1ª rodada, 32º overall",
-            recordes: "Único QB com 1.000+ jardas terrestres em múltiplas temporadas",
-            curiosidade: "Venceu o Heisman Trophy em 2016"
-        },
-        "Saquon Barkley": {
-            idade: "28 anos",
-            draft: "2018 - 1ª rodada, 2º overall",
-            recordes: "Offensive Rookie of the Year em 2018",
-            curiosidade: "Nascido no Bronx, Nova York"
-        },
-        "Ja'Marr Chase": {
-            idade: "25 anos",
-            draft: "2021 - 1ª rodada, 5º overall",
-            recordes: "Recorde de jardas recebidas por um novato nos Bengals",
-            curiosidade: "Ex-companheiro de Justin Jefferson no LSU"
-        },
-        "George Kittle": {
-            idade: "31 anos",
-            draft: "2017 - 5ª rodada, 146º overall",
-            recordes: "Recorde de jardas por um TE em temporada (1.377 em 2018)",
-            curiosidade: "Conhecido por seu bloqueio excepcional"
-        },
-        "Derrick Henry": {
-            idade: "31 anos",
-            draft: "2016 - 2ª rodada, 45º overall",
-            recordes: "8º jogador na história a correr 2.000+ jardas em temporada",
-            curiosidade: "Venceu o Heisman Trophy no futebol americano universitário em 2015"
-        }
+        // ... (mantenha os outros jogadores como estão)
     };
 
-    // Configurar botões "Ver Detalhes"
+    // Configurar botões "Ver Detalhes" (mantido igual)
     const moreButtons = document.querySelectorAll('.btn-more');
     
     moreButtons.forEach(button => {
@@ -71,12 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Validação do formulário de contato (caso esteja na página de contato)
+    // Validação do formulário de contato - VERSÃO ATUALIZADA
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Limpa erros anteriores
             clearErrors();
             
             let isValid = true;
@@ -105,13 +64,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 isValid = false;
             }
             
-            // Se tudo estiver válido
-            if (isValid) {
-                showSuccess('Mensagem enviada com sucesso! Obrigado pelo seu feedback.');
-                contactForm.reset();
+            // Se houver erros, impede o envio
+            if (!isValid) {
+                e.preventDefault();
+            } else {
+                // Se válido, mostra mensagem mas permite o envio pelo Formspree
+                showSuccess('Enviando mensagem...');
+                
+                // Opcional: Adicione um timeout para garantir que o Formspree processe
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 2000);
             }
         });
         
+        // Funções auxiliares (mantidas iguais)
         function showError(input, message) {
             const formGroup = input.parentElement;
             const errorMessage = formGroup.querySelector('.error-message');
