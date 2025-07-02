@@ -7,7 +7,49 @@ document.addEventListener('DOMContentLoaded', function() {
             recordes: "Considerado o melhor QB da geração",
             curiosidade: "Filho de um ex-jogador da MLB"
         },
-        // ... (mantenha os outros jogadores como estão)
+        "Justin Jefferson": {
+            idade: "26 anos",
+            draft: "2020 - 1ª rodada, 22º overall",
+            recordes: "Mais jardas recebidas nos 3 primeiros anos na NFL",
+            curiosidade: "Campeão nacional universitário com LSU em 2019"
+        },
+        "Josh Allen": {
+            idade: "29 anos",
+            draft: "2018 - 1ª rodada, 7º overall",
+            recordes: "Primeiro QB com 4.000+ jardas aéreas e 750+ terrestres em temporada",
+            curiosidade: "Jogou beisebol universitário"
+        },
+        "Lamar Jackson": {
+            idade: "28 anos",
+            draft: "2018 - 1ª rodada, 32º overall",
+            recordes: "Único QB com 1.000+ jardas terrestres em múltiplas temporadas",
+            curiosidade: "Venceu o Heisman Trophy em 2016"
+        },
+        "Saquon Barkley": {
+            idade: "28 anos",
+            draft: "2018 - 1ª rodada, 2º overall",
+            recordes: "Offensive Rookie of the Year em 2018",
+            curiosidade: "Nascido no Bronx, Nova York"
+        },
+        "Ja'Marr Chase": {
+            idade: "25 anos",
+            draft: "2021 - 1ª rodada, 5º overall",
+            recordes: "Recorde de jardas recebidas por um novato nos Bengals",
+            curiosidade: "Ex-companheiro de Justin Jefferson no LSU"
+        },
+        "George Kittle": {
+            idade: "31 anos",
+            draft: "2017 - 5ª rodada, 146º overall",
+            recordes: "Recorde de jardas por um TE em temporada (1.377 em 2018)",
+            curiosidade: "Conhecido por seu bloqueio excepcional"
+        },
+        "Derrick Henry": {
+            idade: "31 anos",
+            draft: "2016 - 2ª rodada, 45º overall",
+            recordes: "8º jogador na história a correr 2.000+ jardas em temporada",
+            curiosidade: "Venceu o Heisman Trophy no futebol americano universitário em 2015"
+        }
+    };
     };
 
     // Configurar botões "Ver Detalhes" (mantido igual)
