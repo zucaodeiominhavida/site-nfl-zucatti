@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             curiosidade: "Venceu o Heisman Trophy no futebol americano universitário em 2015"
         }
     };
-    };
 
     // Configurar botões "Ver Detalhes" (mantido igual)
     const moreButtons = document.querySelectorAll('.btn-more');
