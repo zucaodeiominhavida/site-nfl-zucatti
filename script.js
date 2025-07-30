@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configurar botões "Ver Detalhes" (mantido igual)
     const moreButtons = document.querySelectorAll('.btn-more');
     
-    moreButtons.forEach(button => {
+    const moreButtons.forEach(button => {
         button.addEventListener('click', function() {
             const card = this.closest('.player-card');
             const playerName = card.querySelector('h3').textContent;
