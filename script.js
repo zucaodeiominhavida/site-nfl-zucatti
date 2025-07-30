@@ -51,25 +51,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Configurar botões "Ver Detalhes" (mantido igual)
-    const moreButtons = document.querySelectorAll('.btn-more');
+    // Configurar botões "Ver Detalhes"
+   const moreButtons = document.querySelectorAll('.btn-more');
     
-    const moreButtons.forEach(button => {
+    moreButtons.forEach(button => {  // Removido o 'const' extra
         button.addEventListener('click', function() {
             const card = this.closest('.player-card');
             const playerName = card.querySelector('h3').textContent;
             const stats = card.querySelector('p:nth-of-type(3)').textContent;
             const details = playersData[playerName];
             
-            let message = `Estatísticas de ${playerName} (2022-2023):\n${stats}\n\n`;
-            message += `Idade: ${details.idade}\n`;
-            message += `Draft: ${details.draft}\n`;
-            message += `Recordes: ${details.recordes}\n`;
-            message += `Curiosidade: ${details.curiosidade}`;
-            
-            alert(message);
+            if (details) {
+                let message = `Estatísticas de ${playerName} (2024-2025):\n${stats}\n\n`;
+                message += `Idade: ${details.idade}\n`;
+                message += `Draft: ${details.draft}\n`;
+                message += `Recordes: ${details.recordes}\n`;
+                message += `Curiosidade: ${details.curiosidade}`;
+                
+                alert(message);
+            } else {
+                alert('Detalhes não encontrados para este jogador.');
+            }
         });
     });
+
 
     // Validação do formulário de contato - VERSÃO ATUALIZADA
     const contactForm = document.getElementById('contact-form');
