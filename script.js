@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Dados detalhados dos jogadores (mantido igual)
+    // Dados detalhados dos jogadores
     const playersData = {
         "Patrick Mahomes": {
             idade: "29 anos",
